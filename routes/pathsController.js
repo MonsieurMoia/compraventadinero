@@ -10,6 +10,13 @@ var paths = function(app){
     });
   }
 
+  var localQuery = function(req, res) {
+    // console.log(JSON.stringify(a.body));
+    // console.log(JSON.stringify(b.body));
+    res.locals.data = req.params;
+    // console.log(res.locals);
+  };
+
   //Usage of Paths and their Views,
   //Views are in the Views Folder on Root
 
@@ -19,7 +26,7 @@ var paths = function(app){
   //The 404 Route (ALWAYS Keep this as the last route)
 
   app.get('*', function(req, res){
-    res.status(404).render('not-found');
+    res.status(404).render('not-found', localQuery(req,res));
   });
 
 };

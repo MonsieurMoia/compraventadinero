@@ -1,3 +1,5 @@
+'use strict';
+
 //Dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -11,6 +13,14 @@ app.set('port', (process.env.PORT || 3000));
 // app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
+app.use("/css", express.static(__dirname + '/css'));
+app.use("/js", express.static(__dirname + '/js'));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
+
 // app.engine('html', ejs.renderFile);
 app.set('view engine', 'ejs');
 // views is directory for all template files
