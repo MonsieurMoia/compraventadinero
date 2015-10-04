@@ -1,5 +1,69 @@
 <% include ./partials/header.ejs %>
-  Soy el Index
-  <a href="/login">Me voy al login</a>
+<% include ./partials/nav.ejs %>
+
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <hr>
+      <div class="col-sm-10 col-sm-offset-1">
+        <h1 class="text-center">Aprende a ganar Dinero en el FOREX</h1>
+        <div class="row">
+          <hr>
+          <div class="col-sm-6">
+            <img src="http://placehold.it/400x200" alt="" />
+          </div>
+          <div class="col-sm-4 col-sm-offset-1">
+            <h2 class="h6 text-center text-muted text-uppercase">Aprende sobre el FOREX en segundos</h2>
+            <% include ./partials/form_register.ejs%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr><hr><hr>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-sm-4">
+            <hr>
+            <h3 class="h4">Cómo aprender sobre el FOREX puede ayudarte?</h3>
+            <p>
+              Aprende cómo Carlos aprendió a ganar hasta $500 al día desde su casa usando <span class="text-primary">CompraVenta</span>
+            </p>
+          </div>
+          <div class="col-sm-8">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FhqGNbgsBLg" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr><hr><hr>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <h3 class="text-center">Conoce más historias de CompraVenta</h3>
+          <hr>
+      </div>
+      <div class="row">
+        <% include ./partials/testimonial_compacto.ejs %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr><hr><hr>
 
 <% include ./partials/footer.ejs %>
