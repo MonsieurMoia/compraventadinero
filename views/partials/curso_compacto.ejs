@@ -1,0 +1,11 @@
+
+<!-- Cursos -->
+<% for(var i=0; i<cursos.length; i++) {%>
+
+    <a href="/cursos/<%= cursos[i].id %>" class="list-group-item">
+        <img  class="img-circle" src="http://placehold.it/100x100" alt="">
+        <small>Capitulo <%= [i] %></small>
+        <h3 class="h5"><%= cursos[i].nombre %></h3>
+        <small><%= cursos[i].descripcion %></small>
+    </a>
+<% } %>

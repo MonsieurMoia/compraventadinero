@@ -1,0 +1,41 @@
+{
+    "cursos": [
+      {
+        "id": "1",
+        "nombre": " Qué es comprar y vender dinero.",
+        "descripcion": "Cada país tiene su propia moneda, por ejemplo: en Argentina se utiliza el peso Argentino, en Guatemala el Quetzal, en México el Peso Mexicano y en Costa Rica el Colón. "
+      }, {
+        "id": "2",
+        "nombre": "Tu primera compra y venta.",
+        "descripcion": "Empiece a ganar dinero."
+      }, {
+        "id": "3",
+        "nombre": "Conociendo el ambiente para ganar dinero",
+        "descripcion": "Lorem"
+      }, {
+        "id": "4",
+        "nombre": "Tipos de Gráficas",
+        "descripcion": "Lorem"
+      }, {
+        "id": "5",
+        "nombre": "Tipos de Análisis",
+        "descripcion": "Estudie los diferentes análisis para poder crear el tuyo."
+      }, {
+        "id": "6",
+        "nombre": "Soportes y resistencias",
+        "descripcion": "Aprende a descifrar las gráficas."
+      }, {
+        "id": "7",
+        "nombre": "Utilizando Indicadores",
+        "descripcion": "Un poco de ayuda no cae mal."
+      }, {
+        "id": "8",
+        "nombre": "Estrategias del Forex",
+        "descripcion": "Lorem"
+      }, {
+        "id": "9",
+        "nombre": "Administración del Dinero y Riesgo",
+        "descripcion": "El FOREX es más emocional de lo que piensas."
+      }
+    ]
+}

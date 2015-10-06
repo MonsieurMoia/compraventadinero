@@ -7,6 +7,7 @@
 // var fbRef = new Firebase('https://compraventa.firebaseio.com/testimoniales');
 
 var testimoniales = require('../js/json/testimoniales.json');
+var cursos = require('../js/json/cursos.json');
 
 var paths = function(app){
 
@@ -38,6 +39,8 @@ var paths = function(app){
   renderPathView( "/" , "index", testimoniales );
   renderPathView( "/registro" , "registro" );
   renderPathView( "/entrar" , "entrar" );
+  renderPathView( "/cursos" , "cursos", cursos );
+  renderPathView( "/cursos/:id" , "curso", cursos );
 
   //The 404 Route (ALWAYS Keep this as the last route)
 

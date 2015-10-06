@@ -1670,7 +1670,7 @@ a.text-danger:focus {
   color: #843534; }
 
 /* line 119, /Users/monsieurmoia/Documents/PipiBebe/build/sass/bootstrap/_type.scss */
-.bg-primary {
+.bg-primary, .bg-info {
   color: #fff; }
 
 /* line 4, /Users/monsieurmoia/Documents/PipiBebe/build/sass/bootstrap/mixins/_background-variant.scss */
@@ -1693,12 +1693,12 @@ a.bg-success:focus {
 
 /* line 4, /Users/monsieurmoia/Documents/PipiBebe/build/sass/bootstrap/mixins/_background-variant.scss */
 .bg-info {
-  background-color: #d9edf7; }
+  background-color: #2A8793; }
 
 /* line 7, /Users/monsieurmoia/Documents/PipiBebe/build/sass/bootstrap/mixins/_background-variant.scss */
 a.bg-info:hover,
 a.bg-info:focus {
-  background-color: #afd9ee; }
+  background-color: #1f636b; }
 
 /* line 4, /Users/monsieurmoia/Documents/PipiBebe/build/sass/bootstrap/mixins/_background-variant.scss */
 .bg-warning {
@@ -7509,3 +7509,34 @@ button.close {
   /* line 16, /Users/monsieurmoia/Documents/PipiBebe/build/sass/bootstrap/mixins/_responsive-visibility.scss */
   .hidden-print {
     display: none !important; } }
+
+/* line 2, /Users/monsieurmoia/Documents/PipiBebe/build/sass/cursos.scss */
+.curso .instrucciones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 33%;
+  padding: 80px 40px 80px;
+  overflow-y: auto;
+  z-index: 2; }
+
+/* line 12, /Users/monsieurmoia/Documents/PipiBebe/build/sass/cursos.scss */
+.curso .ejemplo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 140px 0px 0px 33%;
+  height: 100%;
+  background-color: #ddd; }
+
+/* line 21, /Users/monsieurmoia/Documents/PipiBebe/build/sass/cursos.scss */
+.curso .asistencia {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.15);
+  top: 70px;
+  right: 0;
+  padding: 10px 10px 10px 35%; }

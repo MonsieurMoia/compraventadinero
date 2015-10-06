@@ -116,7 +116,7 @@ mark,
 // Contextual backgrounds
 // For now we'll leave these alongside the text classes until v4 when we can
 // safely shift things around (per SemVer rules).
-.bg-primary {
+.bg-primary,.bg-info {
   // Given the contrast here, this is the only class to have its color inverted
   // automatically.
   color: #fff;
@@ -125,7 +125,7 @@ mark,
 
 @include bg-variant('.bg-success', $state-success-bg);
 
-@include bg-variant('.bg-info', $state-info-bg);
+@include bg-variant('.bg-info', $brand-info);
 
 @include bg-variant('.bg-warning', $state-warning-bg);
 
