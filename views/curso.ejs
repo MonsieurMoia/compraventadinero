@@ -14,13 +14,15 @@
 
         <% curso.forEach(function(cursito){ %>
 
-        <h1 class="h4"><%= curso.nombrecurso %></h1>
+        <h1 class="h4"><%= cursito.nombrecurso %></h1>
 
+          <%= cursito.capitulos %>
+          Probablemente agregar un include para pasos
 
           <p class="text-justify ">
-            <h3><%= cursito.capitulos %></h3>
+            <h3></h3>
             <br>
-            <%= cursito.texto %>
+            <%= cursito.descripcion %>
           </p>
 
         <%  }) %>

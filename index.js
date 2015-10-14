@@ -21,7 +21,7 @@ var Schema = mongoose.Schema;
 var CursoSchema = new Schema({
     nombrecurso: String,
     capitulos: String,
-    texto: String
+    descripcion: String
 });
 
 // Mongoose Model definition

@@ -5,14 +5,15 @@
 
   <hr><hr><hr>
 
-  <%= titulo %>
+  <h1><%= titulo %></h1>
+  <br><br>
   <% cursos.forEach(function(curso){ %>
+  <p>
+    <a href="/cursos/<%= curso._id %>"><%= curso.nombrecurso %></a>
+    <span><%= curso.descripcion %></span>
+    <br>
+  </p>
 
-    <tr>
-        <h1></h1>
-        <td><a href="/cursos/<%= curso._id %>"><%= curso.nombrecurso %></a></td>
-        <td><%= curso.capitulos %></td>
-    </tr>
 
   <%  }) %>
 
