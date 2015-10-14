@@ -74,15 +74,15 @@ gulp.task('sass', function(){
  */
 
 gulp.task('serve', ['nodemon','sass','js'], function() {
-	browserSync.init(null, {
-		proxy: "http://localhost:3000",
-        files: ["./**/*.*","build/**/*.*"],
-        browser: "google chrome",
-        port: 5000,
-	});
+	// browserSync.init(null, {
+	// 	// proxy: "http://localhost:3000",
+  //       files: ["./**/*.*","build/**/*.*"],
+  //       browser: "google chrome",
+  //       // port: 5000
+	// });
 
-  gulp.watch('./build/sass/**/*.scss' , ['sass']);
-  gulp.watch('./build/js/**/*.js' , ['js', browserSync.reload]);
+  // gulp.watch('./build/sass/**/*.scss' , ['sass']);
+  // gulp.watch('./build/js/**/*.js' , ['js', browserSync.reload]);
 });
 
 
