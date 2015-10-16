@@ -1,13 +1,14 @@
-var mongoose = require('mongoose');
-
-
-module.exports = mongoose.model('Users', {
-
-  name: String,
+ var userSchema = {
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   admin: Boolean,
   location: String,
+  meta: {
+    age: Number,
+    website: String
+  },
   created_at: Date,
   updated_at: Date
-});
+}
+
+module.exports = userSchema;
