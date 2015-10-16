@@ -42,7 +42,6 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
     res.render('index');
-    res.send("<a href='/cursos'>Show Cursos</a>");
 });
 
 app.get('/cursos', function (req, res) {
