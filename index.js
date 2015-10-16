@@ -6,8 +6,8 @@ var ejs = require('ejs');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-var mongoUri = process.env.MONGOLAB_URI ||
-  'mongodb://admin:admin@ds051740.mongolab.com:51740/compraventa';
+// var mongoUri = process.env.MONGOLAB_URI ||
+//   'mongodb://admin:admin@ds051740.mongolab.com:51740/compraventa';
 
 // Mongoose connection to MongoDB (ted/ted is readonly)
 mongoose.connect('mongodb://admin:admin@ds051740.mongolab.com:51740/compraventa', function (error) {
