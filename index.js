@@ -7,13 +7,14 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var Users = require('./js/controllers/usersController.js');
-var Cursos = require('./js/controllers/cursosController.js');
 var Paths = require('./routes/pathsController.js');
+var Main = require("./build/js/main.js");
 
+console.log(Main);
 
 console.log(typeof(Users.newUser));
 
-// Users.newUser("jesus","elmacho","jesus");
+// Users.newUser("jesus","kwjebnwnleckw");
 
 
 // var mongoUri = process.env.MONGOLAB_URI ||

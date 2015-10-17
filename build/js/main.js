@@ -1,3 +1,7 @@
 //Main Js
 
-console.log("working main");
+var init = function(){
+  console.log("ebifw");
+}
+
+module.exports = init();
