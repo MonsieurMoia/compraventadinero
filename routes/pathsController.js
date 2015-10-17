@@ -2,11 +2,10 @@
 //Paths
 //
 var Curso = require("../js/controllers/cursosController.js");
-var formNewUser = require("../js/controllers/formNewUser.js");
+
 
 var paths = function(app){
   app.get('/', function (req, res) {
-
     res.render('index');
   });
 

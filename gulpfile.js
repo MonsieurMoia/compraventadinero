@@ -73,16 +73,17 @@ gulp.task('sass', function(){
  * calls other Gulp tasks
  */
 
-gulp.task('serve', ['nodemon','sass','js'], function() {
+gulp.task('serve', ['sass','js','nodemon'], function() {
 	// browserSync.init(null, {
 	// 	// proxy: "http://localhost:3000",
   //       files: ["./**/*.*","build/**/*.*"],
   //       browser: "google chrome",
-  //       // port: 5000
+  //       port: 5000
 	// });
 
-  // gulp.watch('./build/sass/**/*.scss' , ['sass']);
-  // gulp.watch('./build/js/**/*.js' , ['js', browserSync.reload]);
+  gulp.watch('./build/sass/**/*.scss' , ['sass']);
+  gulp.watch('./build/js/**/*.js' , ['js']);
+
 });
 
 

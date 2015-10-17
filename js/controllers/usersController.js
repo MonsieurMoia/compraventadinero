@@ -19,12 +19,12 @@ User.find({}, function(err, users) {
   console.log(users);
 });
 
-User.newUser = function(username,password){
+User.newUser = function(email, password){
 
   console.log("Me estoy corriendo");
   // create a new user
   var newUser = User({
-    username: username,
+    email: email,
     password: password,
     admin: true
   });
