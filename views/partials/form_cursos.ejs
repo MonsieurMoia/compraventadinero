@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>Sube tus clases</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js">  </script>
+    <style>
+        body {
+            font: 13px verdana;
+            font-weight: normal;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="main">
+        <p><b>Nuevo Curso</b></p>
+        <br>
+        <p>Escribe el nombre del curso</p>
+        <input type="text"  id= "cursoNombre" value="Nombre" name="lastname">
+        <br>
+        <p>Escribe una breve descripción para el curso</p>
+        <input type="text"  id= "cursoDescripcion" value="Descripción" name="lastname">
+        <br>
+        <br>
+        <input type="button" id="btAdd" value="Agrega un paso" class="bt" />
+        <input type="button" id="btRemove" value="Quita un paso" class="bt" />
+        <input type="button" id="btRemoveAll" value="Quitar todos los pasos" class="bt" />
+        <br />
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+
+        var iCnt = 0;
+        // Div para meter los nuevos elementos
+        var container = $(document.createElement('div')).css({
+            padding: '5px', margin: '20px', width: '170px', border: '1px dashed',
+            borderTopColor: '#999', borderBottomColor: '#999',
+            borderLeftColor: '#999', borderRightColor: '#999'
+        });
+
+        $('#btAdd').click(function() {
+            if (iCnt <= 19) {
+
+                iCnt = iCnt + 1;
+
+                // Agregamos nuevos campos
+                $(container).append('<input type=textarea rows="3" cols="20" class="input" id=tb' + iCnt + ' ' +
+                            'value="Paso ' + iCnt + '" />');
+
+                // Submit solo si hay un elemento
+                if (iCnt == 1) {
+
+                    var divSubmit = $(document.createElement('div'));
+                    $(divSubmit).append('<input type=button class="bt" onclick="GetTextValue()"' + 'id=btSubmit value=Submit />');
+
+                }
+
+                // agregamos los elementos al main
+                $('#main').after(container, divSubmit);
+            }
+            // AFTER REACHING THE SPECIFIED LIMIT, DISABLE THE "ADD" BUTTON.
+            // (20 IS THE LIMIT WE HAVE SET)
+            else {
+
+                $(container).append('<label>Alcanzaste el tope de pasos, reestructura tu curso</label>');
+                $('#btAdd').attr('class', 'bt-disable');
+                $('#btAdd').attr('disabled', 'disabled');
+
+            }
+        });
+
+        $('#btRemove').click(function() {   // quitamos elementos
+            if (iCnt != 0) { $('#tb' + iCnt).remove(); iCnt = iCnt - 1; }
+
+            if (iCnt == 0) { $(container).empty();
+
+                $(container).remove();
+                $('#btSubmit').remove();
+                $('#btAdd').removeAttr('disabled');
+                $('#btAdd').attr('class', 'bt')
+
+            }
+        });
+
+        $('#btRemoveAll').click(function() {    // nos volamos todo
+
+            $(container).empty();
+            $(container).remove();
+            $('#btSubmit').remove(); iCnt = 0;
+            $('#btAdd').removeAttr('disabled');
+            $('#btAdd').attr('class', 'bt');
+
+        });
+    });
+
+    // obtenemos los valores para testearlo
+    var divValue, values = '';
+
+    function GetTextValue() {
+
+        $(divValue).empty();
+        $(divValue).remove(); values = '';
+
+        $('.input').each(function() {
+            divValue = $(document.createElement('div')).css({
+                padding:'5px', width:'200px'
+            });
+            values += this.value + '<br />'
+        });
+
+        $(divValue).append('<p><b>Testing que funciona</b></p>' + values);
+        $('body').append(divValue);
+
+    }
+</script>
+</html>
