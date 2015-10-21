@@ -73,7 +73,7 @@ gulp.task('sass', function(){
  * calls other Gulp tasks
  */
 
-gulp.task('serve', ['sass','js','nodemon'], function() {
+gulp.task('serve', ['sass','js'], function() {
 	// browserSync.init(null, {
 	// 	// proxy: "http://localhost:3000",
   //       files: ["./**/*.*","build/**/*.*"],

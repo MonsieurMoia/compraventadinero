@@ -1,6 +1,6 @@
 var cursoSchema = {
   nombrecurso: String,
-  capitulos: String,
+  pasos: Array,
   descripcion: String
 }
 
