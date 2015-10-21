@@ -1,29 +1,20 @@
 <% include ./partials/header.ejs %>
 <% include ./partials/nav.ejs %>
 <hr><hr>
-
-
-
     <div class="curso">
-
-
 
       <div class="instrucciones bg-info">
         <button class="btn btn-info">< Paso anterior</button>
-        <h2><%= titulo %></h2>
+        <!-- <h2><%= titulo %></h2> -->
 
-        <% curso.forEach(function(cursito){ %>
+        <% curso.forEach(function(curso){ %>
 
-        <h1 class="h4"><%= cursito.nombrecurso %></h1>
+        <h1 class="h3"><%= curso.nombrecurso %></h1>
 
-          <%= cursito.capitulos %>
-          Probablemente agregar un include para pasos
-
-          <p class="text-justify ">
-            <h3></h3>
-            <br>
-            <%= cursito.descripcion %>
-          </p>
+          <% curso.pasos.forEach(function(paso,index){ %>
+            <h4>Paso <%= index+1 %></h4>
+            <p><%= paso %></p>
+          <%  }) %>
 
         <%  }) %>
 
