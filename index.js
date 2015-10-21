@@ -1,3 +1,5 @@
+// Database
+require('./database.js');
 
 //Dependencies
 var express = require('express');
@@ -5,27 +7,20 @@ var bodyParser = require('body-parser');
 var ejs = require('ejs');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var Users = require('./js/controllers/usersController.js');
-var Paths = require('./routes/pathsController.js');
-var Main = require("./build/js/main.js");
+// var Users = require('./js/controllers/usersController.js');
+var routes = require('./routes/index');
+var cursos = require('./routes/cursos');
+var form = require('./routes/form');
+var formnewcursos = require('./routes/formnewcursos.js');
 
-console.log(Main);
 
-console.log(typeof(Users.newUser));
-
+// console.log(typeof(Users.newUser));
 // Users.newUser("jesus","kwjebnwnleckw");
-
 
 // var mongoUri = process.env.MONGOLAB_URI ||
 //   'mongodb://admin:admin@ds051740.mongolab.com:51740/compraventa';
 
-// Mongoose connection to MongoDB (ted/ted is readonly)
-mongoose.connect('mongodb://admin:admin@ds051740.mongolab.com:51740/compraventa', function (error) {
-    if (error) {
-        console.log(error);
-    }
-});
+
 
 // Bootstrap express
 //Express
@@ -38,8 +33,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
+
+
 // URLS management
-Paths(app);
+app.use('/',routes);
+app.use('/cursos', cursos);
+app.use('/nuevo_curso', form);
+app.use('/crear', form);
+app.use('/formnewcursos', formnewcursos);
+
 
 // Start the server
 app.listen(5000);

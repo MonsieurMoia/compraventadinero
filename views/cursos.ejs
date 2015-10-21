@@ -1,28 +1,13 @@
 <% include ./partials/header.ejs %>
 <% include ./partials/nav.ejs %>
 
-
-
-  <hr><hr><hr>
-
-  <h1><%= titulo %></h1>
-  <br><br>
-  <% cursos.forEach(function(curso){ %>
-  <p>
-    <a href="/cursos/<%= curso._id %>"><%= curso.nombrecurso %></a>
-    <span><%= curso.descripcion %></span>
-    <br>
-  </p>
-
-
-  <%  }) %>
-
+<hr><hr>
 
   <div class="container">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <div class="row">
-          <h1 class="text-center text-info">Cursos del FOREX</h1>
+          <h1 class="text-center text-info"><%= titulo %></h1>
           <h2 class="h5 text-center text-muted">Aprenda a cómo ganar dinero en el FOREX como un inversionista profesional</h2>
         </div>
         <div class="row">

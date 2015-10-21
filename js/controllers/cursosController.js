@@ -15,16 +15,17 @@ Curso.find({}, function(err, cursos) {
   if (err) throw err;
 
   // object of all the users
-  console.log(cursos);
+  // console.log(cursos);
 });
 
-Curso.newCurso = function(nombre, descripcion){
+Curso.newCurso = function(body){
 
   console.log("Me estoy corriendo");
   // create a new user
   var newCurso = Curso({
-    nombre: nombre,
-    descripcion: descripcion
+    nombrecurso: body.nombrecurso,
+    pasos: body.pasos,
+    descripcion: body.descripcion
   });
 
   // save the user
@@ -34,7 +35,7 @@ Curso.newCurso = function(nombre, descripcion){
       throw err;
       console.log('Errrrrrooooooor');
     }
-    console.log('User created!');
+    console.log('Curso created!');
   });
 }
 
