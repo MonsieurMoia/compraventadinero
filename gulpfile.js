@@ -114,4 +114,31 @@ gulp.task('nodemon', function (cb) {
  * This task will run when you call 'gulp' in the Command Line
  */
 
-gulp.task('default', ['serve']);
+gulp.task('default', function(){
+  browserSync.init(null, {
+		proxy: "http://localhost:5000",
+        files: ["build/**/*.*"],
+        browser: "google chrome",
+        port: 7000
+	});
+  gulp.watch('./build/sass/**/*.scss' , ['sass']);
+  gulp.watch('./build/js/**/*.js' , ['js']);
+
+
+  var started = false;
+
+	nodemon({
+		script: 'index.js'
+	}).on('start', function () {
+		// to avoid nodemon being started multiple times
+		// thanks @matthisk
+		if (!started) {
+			cb();
+			started = true;
+		}
+	}).on('restart', function(){
+		// when the app has restarted, run livereload.
+		gulp.src('index.js')
+			.pipe(browserSync())
+	});
+});

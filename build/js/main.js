@@ -12,7 +12,7 @@ var btnAgregar = document.getElementById("btn-agregar"),
     btnQuitar = document.getElementById("btn-quitar"),
     pasosLista = document.getElementById("lista-pasos");
 
-
+console.log("A ver si es cierto");
 
 
 btnAgregar.onclick = function(e){
