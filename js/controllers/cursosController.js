@@ -1,48 +1,49 @@
-//Dependencies
+//Dependencias
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var cursoSchema = require('../../schemas/cursoSchema.js');
+var fs = require('fs');
 
 //---------------------------------------------------
-// Schema para cursos
+// Asignar Schema de cursos a la variable Curso
 var curso = new Schema(cursoSchema);
 
-// modelo para usuarios
+// Modelo de Mongoose para cursos
 var Curso = mongoose.model('cursos', curso);
 
-// get all the users
+// Llamar todos los cursos
 Curso.find({}, function(err, cursos) {
   if (err) throw err;
 
-  // object of all the users
+  // Consolear todos los curso
   // console.log(cursos);
 });
 
+// Funcion para crear nuevos cursos
+// y guardarlos en Mongolab
 Curso.newCurso = function(body){
 
-  console.log("Me estoy corriendo");
-  // create a new user
-  // var newCurso = Curso({
-  //   nombrecurso: body.nombrecurso,
-  //   pasos: {contenido:body.paso},
-  //   descripcion: body.descripcion
-  // });
 
+  // Crear nuevo Curso
   var curso = new Curso();
   curso.nombrecurso = body.nombrecurso;
-  for (var i = 0; i < body.paso.length; i++) {
-    curso.pasos.push({contenido:body.paso[i]})
-  }
   curso.descripcion = body.descripcion;
 
-  // save the user
+  // Agregar pasos y adjuntos de cada paso por cantidad
+  // de pasos que se hayan agregado enm el formulario de nuevos cursos
+  for (var i = 0; i < body.paso.length; i++) {
+    curso.pasos.push({contenido:body.paso[i]});
+  };
+
+
+  // Salvar Curso en Mongolab
   curso.save(function(err) {
     if (err)
     {
       throw err;
-      console.log('Errrrrrooooooor');
+      console.log('Funco? NOP');
     }
-    console.log('Curso created!');
+    console.log('Curso Agregado!');
   });
 }
 

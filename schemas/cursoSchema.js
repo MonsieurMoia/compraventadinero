@@ -1,6 +1,9 @@
 var cursoSchema = {
   nombrecurso: String,
-  pasos: [{contenido : String }],
+  pasos: [{
+    contenido : String,
+    adjunto: { data: Buffer, contentType : String}
+  }],
   descripcion: String
 }
 

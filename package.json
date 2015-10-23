@@ -20,6 +20,7 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "firebase": "^2.3.1",
+    "fs": "0.0.2",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
