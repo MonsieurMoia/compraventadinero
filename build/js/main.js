@@ -18,7 +18,7 @@ console.log("A ver si es cierto");
 btnAgregar.onclick = function(e){
 
   var newInput = document.createElement('input');
-  newInput.setAttribute('name','pasos');
+  newInput.setAttribute('name','paso');
   newInput.setAttribute('placeholder','Agregue el contenido del paso');
   newInput.setAttribute('class','form-control');
 

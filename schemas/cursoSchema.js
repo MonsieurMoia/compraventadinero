@@ -1,6 +1,6 @@
 var cursoSchema = {
   nombrecurso: String,
-  pasos: Array,
+  pasos: [{contenido : String }],
   descripcion: String
 }
 

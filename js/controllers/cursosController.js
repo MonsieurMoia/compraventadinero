@@ -22,14 +22,21 @@ Curso.newCurso = function(body){
 
   console.log("Me estoy corriendo");
   // create a new user
-  var newCurso = Curso({
-    nombrecurso: body.nombrecurso,
-    pasos: body.pasos,
-    descripcion: body.descripcion
-  });
+  // var newCurso = Curso({
+  //   nombrecurso: body.nombrecurso,
+  //   pasos: {contenido:body.paso},
+  //   descripcion: body.descripcion
+  // });
+
+  var curso = new Curso();
+  curso.nombrecurso = body.nombrecurso;
+  for (var i = 0; i < body.paso.length; i++) {
+    curso.pasos.push({contenido:body.paso[i]})
+  }
+  curso.descripcion = body.descripcion;
 
   // save the user
-  newCurso.save(function(err) {
+  curso.save(function(err) {
     if (err)
     {
       throw err;
