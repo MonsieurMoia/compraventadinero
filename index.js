@@ -13,7 +13,6 @@ var cursos = require('./routes/cursos');
 var form = require('./routes/form');
 var formnewcursos = require('./routes/formnewcursos.js');
 
-
 // console.log(typeof(Users.newUser));
 // Users.newUser("jesus","kwjebnwnleckw");
 
