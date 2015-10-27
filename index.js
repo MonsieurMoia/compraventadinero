@@ -20,7 +20,6 @@ var formnewcursos = require('./routes/formnewcursos.js');
 //   'mongodb://admin:admin@ds051740.mongolab.com:51740/compraventa';
 
 
-
 // Bootstrap express
 //Express
 var app = express();
