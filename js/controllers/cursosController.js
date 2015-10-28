@@ -58,7 +58,6 @@ Curso.newCurso = function(body){
                 }
             });
           });
-
   //-----------------------------------------------------
   // Agregar pasos y adjuntos de cada paso por cantidad
   // de pasos que se hayan agregado enm el formulario de nuevos cursos
