@@ -6,16 +6,19 @@
       <div class="instrucciones bg-info">
         <button class="btn btn-info">< Paso anterior</button>
         <!-- <h2><%= titulo %></h2> -->
-
+        <% var arrayCursos = [] %>
 
 
         <% curso.forEach(function(curso){ %>
 
         <h1 class="h3"><%= curso.nombrecurso %></h1>
 
-          <% curso.pasos.forEach(function(paso,index){ %>
+          <% curso.pasos.forEach(function(paso,index){
+            arrayCursos.push(paso.contenido)
+            console.log(arrayCursos)%>
             <h4>Paso <%= index+1 %></h4>
             <p><%= paso.contenido %></p>
+
           <%  }) %>
 
         <%  }) %>
