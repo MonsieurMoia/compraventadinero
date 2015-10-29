@@ -32,12 +32,12 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
 // Manejo especial de usuarios.
-app.use(stormpath.init(app, {
-  apiKeyId: '3P9AQUE7UAZ9306NJ48L25YSS',
-  apiKeySecret: 'jhU2xtbYfQ7jF6E3YQbI3TC6PUrOak4iWUr7julv9xo',
-  application: 'https://api.stormpath.com/v1/applications/3mkxCG3iFhO0jjUaUNs0dR',
-  secretKey: 'uyuyuyestoessecreto',
-}));
+// app.use(stormpath.init(app, {
+//   apiKeyId: '3P9AQUE7UAZ9306NJ48L25YSS',
+//   apiKeySecret: 'jhU2xtbYfQ7jF6E3YQbI3TC6PUrOak4iWUr7julv9xo',
+//   application: 'https://api.stormpath.com/v1/applications/3mkxCG3iFhO0jjUaUNs0dR',
+//   secretKey: 'uyuyuyestoessecreto',
+// }));
 //
 
 
